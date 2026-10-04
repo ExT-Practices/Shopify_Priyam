@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flacio - Plants Shopify Theme</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body
+    style="background-color: #f4f6f8; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+    <div class="container d-flex flex-column justify-content-center vh-100" style="max-width: 540px; padding: 0 40px;">
+        
+        <div class="d-flex align-items-center mb-4 pb-2">
+            <svg width="24" height="24" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 10V8a4 4 0 0 1 8 0v2h4v14H4V10h4zm2 0h4V8a2 2 0 0 0-4 0v2z" fill="#4ea0ff" />
+                <path d="M16 14v-2a3 3 0 0 1 6 0v2h3v10h-12V14h3zm2 0h2v-2a1 1 0 0 0-2 0v2z" fill="#f8b628" />
+            </svg>
+            <span class="ms-2 fs-5 fw-bold" style="color: #212326;">shopify</span>
+        </div>
+
+        
+        <h1 class="fw-bold mb-2" style="color: #212326; font-size: 2.25rem;">Shopify</h1>
+
+        
+        <p class="mb-4 pb-1" style="color: #6d7175; font-size: 0.95rem;">
+            This store is password protected. Use the password to enter the store.
+        </p>
+
+        
+        <form action="home.html" onsubmit="checkPassword(event)">
+            <div class="mb-3">
+                <label for="storePassword" class="form-label"
+                    style="color: #212326; font-weight: 500; font-size: 0.95rem;">Enter store password</label>
+                <input type="password" class="form-control shadow-none" id="storePassword"
+                    style="border: 1px solid #c9cccf; border-radius: 4px; padding: 10px 12px; font-size: 1rem; color: #212326; max-width: 100%;" oninput="hideError()">
+            </div>
+
+            
+            <div id="errorMsg" class="align-items-center mb-3 pt-1" style="color: #d82c0d; font-size: 0.9rem; display: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-info-circle-fill me-2" viewBox="0 0 16 16">
+                    <path
+                        d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2" />
+                </svg>
+                <span class="mt-0">Password incorrect, please try again.</span>
+            </div>
+
+            
+            <button type="submit" id="loginBtn" class="btn"
+                style="background-color: #008060; color: white; border-radius: 4px; padding: 10px 24px; font-weight: 500;">
+                Enter
+            </button>
+        </form>
+
+        
+        <div class="mt-5 pt-2" style="color: #6d7175; font-size: 0.9rem;">
+            Are you the store owner? <a href="#" style="color: #2c6ecb; text-decoration: none;">Log in here</a>
+        </div>
+    </div>
+    <script src="../js/login.js"></script>
+</body>
+
+</html>
